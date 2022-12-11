@@ -1,0 +1,39 @@
+<doctype html="">
+  
+<div class="content">
+
+<title>Movie-Theatre</title>
+
+<h2 style="text-align:left;color:blue;">Movie-Theatre</h2>
+  
+<p></p><p>
+<a href="{{ url_for('.rate_Movie') }}"> Rate a movie </a>
+  
+<p></p><p>
+<a href="{{ url_for('.shop') }}"> Find merchandise </a>
+
+<p></p><p>
+<a href="{{ url_for('.history') }}"> Purchase History </a>
+  
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% from "_formhelpers.html" import render_field %}
+<form method="post">
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </p></dl>
+  <p><input type="submit" value="Search">
+</p></form>
+</div>
+
+</doctype>

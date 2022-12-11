@@ -1,0 +1,13 @@
+create table Movies(MovieName varchar(50), MovieType varchar(50), MovieLength integer, AgeGroup varchar(50), DirectorName varchar(50), primary key(MovieName));
+create table Buyer(BuyerSSN integer, BuyerName varchar(50), BuyerAge integer, PhoneNumber varchar(50), Email varchar(50), primary key(BuyerSSN));
+create table Ticket(SerialNumber integer, MovieName varchar(50), Seat varchar(50), Price integer, Venue varchar(50), primary key(SerialNumber));
+create table Book(BuyerSSN integer, SerialNumber integer, BookingDate date, primary key(BuyerSSN, SerialNumber));
+create table Location(Venue varchar(50), MovieName varchar(50), City varchar(50), NumberOfSeat integer, primary key(Venue, MovieName));
+create table Rating(BuyerSSN integer, MovieName varchar(50), Rating integer, RatingDate date, primary key(BuyerSSN, MovieName));
+create table Merchandise(MovieName varchar(50), Merchandise varchar(50), Price integer, primary key(MovieName, Merchandise));
+create table Company(Company varchar(50), City varchar(50), State varchar(50), Country varchar(50), primary key(Company));
+create table Investment(Company varchar(50), MovieName varchar(50), primary key(Company, MovieName));
+create table MovieDate(MovieName varchar(50), MovieTime date, primary key(MovieName, MovieTime));
+create table Actors(ActorName varchar(50), ActorAge integer, primary key(ActorName));
+create table ActIn(ActorName varchar(50), MovieName varchar(50), ActorRole varchar(50), primary key(ActorName, MovieName));
+create table Director(DirectorName varchar(50), DirectorAge integer, primary key(DirectorName));
