@@ -1,3 +1,4 @@
+use db;
 create table Movies(MovieName varchar(50), MovieType varchar(50), MovieLength integer, AgeGroup varchar(50), DirectorName varchar(50), primary key(MovieName));
 create table Buyer(BuyerSSN integer, BuyerName varchar(50), BuyerAge integer, PhoneNumber varchar(50), Email varchar(50), primary key(BuyerSSN));
 create table Ticket(SerialNumber integer, MovieName varchar(50), Seat varchar(50), Price integer, Venue varchar(50), primary key(SerialNumber));
