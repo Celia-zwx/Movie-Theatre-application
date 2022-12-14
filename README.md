@@ -1,6 +1,6 @@
 # Movie-Theatre-application
 
-
+<img src="/6400project.drawio.png" alt="Alt text" title="ER Diagram">
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
